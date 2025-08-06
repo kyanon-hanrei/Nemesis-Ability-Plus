@@ -1,0 +1,34 @@
+<Entity name="nemesis_nap-al-theilluminati">
+
+
+<SpriteComponent 
+		_tags="enabled_in_world" 
+		alpha="1" 
+		image_file="mods/Nemesis-Ability-Plus/files/effects/nap-theilluminati/theilluminati_ic.png" 
+		next_rect_animation="" 
+		rect_animation="" 
+		ui_is_parent="1"
+		offset_x="-1040"
+		offset_y="20"
+		z_index="10"
+		>
+	</SpriteComponent>
+
+
+    <UIIconComponent
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-theilluminati.png"
+		name="The Illuminati"
+		description="Looking at you."
+		display_above_head="0"
+		display_in_hud="1"
+		is_perk="1"
+    >
+	</UIIconComponent>
+
+	 <LuaComponent
+		script_source_file="mods/Nemesis-Ability-Plus/files/effects/nap-theilluminati/effect.lua"
+		execute_every_n_frame="2"
+		>
+	 </LuaComponent>
+
+</Entity>

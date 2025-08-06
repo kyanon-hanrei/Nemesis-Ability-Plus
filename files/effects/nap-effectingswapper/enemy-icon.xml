@@ -1,0 +1,15 @@
+<Entity>
+	<InheritTransformComponent>
+	</InheritTransformComponent>	
+    
+	<UIIconComponent 
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/effects/nap-effectingswapper/effectingswapper.png"
+		name="EffectingSwapper"
+		description=""
+		display_above_head="1"
+		display_in_hud="0"
+		is_perk="0"
+	>
+	</UIIconComponent>
+
+</Entity>

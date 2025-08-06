@@ -1,0 +1,19 @@
+<Entity name="nemesis_nap-poobomber">
+	<InheritTransformComponent>
+    </InheritTransformComponent>	
+    
+    <ShotEffectComponent
+        extra_modifier="poo_shot"
+		>
+	</ShotEffectComponent>
+
+    <UIIconComponent
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-poobomber.png"
+		name="nap-poobomber"
+		description="You have smell horrible !"
+		display_above_head="0"
+		display_in_hud="1"
+		is_perk="0"
+    >
+	</UIIconComponent>
+</Entity>

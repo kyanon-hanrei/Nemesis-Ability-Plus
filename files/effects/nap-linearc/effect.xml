@@ -1,0 +1,18 @@
+<Entity name="nemesis_nap-linearc"> 
+	
+	<UIIconComponent
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-linearc.png"
+		name="nap-linearc"
+		description="$actiondesc_line_arc"
+		display_above_head="0"
+		display_in_hud="1"
+		is_perk="0"
+	>
+	</UIIconComponent>
+
+	<ShotEffectComponent
+		extra_modifier="line_arc"
+		>
+	</ShotEffectComponent>
+
+</Entity>

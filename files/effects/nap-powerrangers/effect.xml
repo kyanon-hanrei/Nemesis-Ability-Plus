@@ -1,0 +1,19 @@
+<Entity name="nemesis_nap-powerrangers"> 
+	
+	<LuaComponent
+		script_source_file="mods/Nemesis-Ability-Plus/files/effects/nap-powerrangers/effect.lua"
+		execute_every_n_frame="2"
+	>
+	</LuaComponent>
+
+	<UIIconComponent
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-powerrangers.png"
+		name="nap-PowerRangers"
+		description="Enemys come back to life in a giant!"
+		display_above_head="0"
+		display_in_hud="1"
+		is_perk="0"
+	>
+	</UIIconComponent>
+	
+</Entity>

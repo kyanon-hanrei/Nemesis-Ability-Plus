@@ -1,0 +1,21 @@
+<Entity name="nemesis_nap-fireballray">
+	<InheritTransformComponent />
+	
+	<LuaComponent 
+		_enabled="1" 
+		script_source_file="mods/Nemesis-Ability-Plus/files/scripts/projectiles/fireball_ray_nap.lua" 
+		execute_every_n_frame="20">
+	</LuaComponent>
+	
+	<UIIconComponent
+		name="$streamingevent_fireball_thrower_player"
+		description="$streamingeventdesc_fireball_thrower_player"
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-fireballray.png"
+		is_perk="0"
+		display_above_head="1"
+		display_in_hud="1"
+		>
+	</UIIconComponent>
+	
+</Entity>
+

@@ -1,0 +1,24 @@
+<Entity name="nemesis_nap-moreknockback">
+	<InheritTransformComponent>
+    </InheritTransformComponent>	
+    <!--
+    <ShotEffectComponent
+        extra_modifier="more_knockback"
+		>
+	</ShotEffectComponent>
+-->
+	<LuaComponent
+		script_source_file="mods/Nemesis-Ability-Plus/files/effects/nap-moreknockback/effect.lua"
+		execute_every_n_frame="2"
+    >
+	</LuaComponent>
+    <UIIconComponent
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-moreknockback.png"
+		name="$action_knockback"
+		description="All surrounding projectiles have high knockback power."
+		display_above_head="1"
+		display_in_hud="1"
+		is_perk="0"
+    >
+	</UIIconComponent>
+</Entity>

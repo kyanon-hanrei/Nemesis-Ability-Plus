@@ -1,0 +1,26 @@
+<Entity tags="teleportable_NOT, SHOW_NP_COST">
+
+    <SpriteComponent 
+        _tags="enabled_in_world"
+        image_file="data/fonts/font_pixel_white.xml"
+        emissive="1" 
+        is_text_sprite="1" 
+        offset_x="0" 
+        offset_y="0" 
+        update_transform="1" 
+        update_transform_rotation="0"
+        text="CostNP: 0"
+        z_index="-10"
+         >
+    </SpriteComponent>
+
+
+	<LuaComponent 
+        _enabled="1" 
+        execute_on_added="1"
+        remove_after_executed="1"
+        execute_every_n_frame="-1"
+        script_source_file="mods/Nemesis-Ability-Plus/files/entities/shownp/shownp_init.lua" >
+    </LuaComponent>
+  
+</Entity>
