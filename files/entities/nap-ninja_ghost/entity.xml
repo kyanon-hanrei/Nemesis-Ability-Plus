@@ -1,7 +1,0 @@
-<Entity name="nemesis_nap-ninja_ghost">
-	<LuaComponent 
-		script_source_file="mods/Nemesis-Ability-Plus/files/entities/nap-ninja_ghost/get_ninja_ghost.lua"
-		execute_every_n_frame="4"
-		execute_times = "1" >
-	</LuaComponent>
-</Entity>

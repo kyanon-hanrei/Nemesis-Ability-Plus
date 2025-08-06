@@ -1,7 +1,0 @@
-<Entity name="nemesis_nap-youarecyclops">
-	<LuaComponent 
-		script_source_file="mods/Nemesis-Ability-Plus/files/entities/nap-youarecyclops/get_personal_laser.lua"
-		execute_every_n_frame="4"
-		execute_times = "1" >
-	</LuaComponent>
-</Entity>
