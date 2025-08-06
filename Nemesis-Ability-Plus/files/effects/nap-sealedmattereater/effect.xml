@@ -1,0 +1,18 @@
+<Entity name="nemesis_nap-sealedmattereater"> 
+	
+	<UIIconComponent
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-sealedmattereater.png"
+		name="nap-sealedmattereater"
+		description="Your matter eater doesn't seem to work."
+		display_above_head="0"
+		display_in_hud="1"
+		is_perk="0"
+	>
+	</UIIconComponent>
+
+	<ShotEffectComponent
+		extra_modifier="sealed_matter_eater"
+		>
+	</ShotEffectComponent>
+	
+</Entity>

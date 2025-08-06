@@ -1,0 +1,19 @@
+<Entity name="nemesis_nap-youwantthis">
+	<InheritTransformComponent>
+    </InheritTransformComponent>	
+    
+    <ShotEffectComponent
+        extra_modifier="projectile_homing_shooter"
+		>
+	</ShotEffectComponent>
+
+    <UIIconComponent
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-youwantthis.png"
+		name="$streamingevent_boomerang_shots"
+		description="Everyone love this."
+		display_above_head="1"
+		display_in_hud="1"
+		is_perk="0"
+    >
+	</UIIconComponent>
+</Entity>
