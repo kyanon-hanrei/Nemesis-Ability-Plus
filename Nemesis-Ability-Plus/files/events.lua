@@ -88,7 +88,6 @@ function timed_ability(name, frames, entity_file, reduction)
 end
 
 --以下、コルミシルマを倒したプレイヤーの通知用
-
 customEvents["NemesisKolmisilmaDefeated"] = function(data)
     local userId = data.userId
     local playerlist = json.decode(NEMESIS.PlayerList)
@@ -135,8 +134,32 @@ customEvents["NemesisKolmisilmaDefeated"] = function(data)
 	end
 	--以上、サンポフラグをNG+に入ったサインとして立てる処理
 end
-
 --以上、コルミシルマを倒したプレイヤーの通知用
+
+--以下、テレポート禁止ルールを他のプレイヤーにも適用する処理
+customEvents["WeCantUseTeleportation"] = function(data)
+    if (GlobalsGetValue("NAP_NO_TELEPORT_RULE") ~= "1") then
+        --テレポ禁止ルール用効果のトリガー用のフラグセット
+        GlobalsSetValue("NAP_NO_TELEPORT_RULE", "1")
+
+        --テレポ禁止の永続状態異常付与
+	    local player_entity = EntityGetClosestWithTag( 0, 0, "player_unit")
+	    local x, y = EntityGetTransform( player_entity )
+		local thingy = EntityLoad("mods/Nemesis-Ability-Plus/files/effects/rule_noteleport/effect.xml", x, y)
+		EntityAddChild(player_entity, thingy)
+
+		--テレポ液を不安定テレポ液に変換する処理
+		--local water = CellFactory_GetType( "water" )
+		local teleportatium = CellFactory_GetType( "magic_liquid_teleportation" )
+		local u_teleportatium = CellFactory_GetType( "magic_liquid_unstable_teleportation" )
+		--ConvertMaterialEverywhere( u_teleportatium, water )
+		ConvertMaterialEverywhere( teleportatium, u_teleportatium )
+
+        GamePrintImportant("Teleportation has been sealed")
+    end
+end
+--以上、テレポート禁止ルールを他のプレイヤーにも適用する処理
+
 --以下、旧Fix、Teamsの再現
 ABILITIES["trip"] = {
     id="trip", name="Trip", weigths={0.80, 0.80, 0.80, 0.80, 0.80, 0.80},
@@ -624,7 +647,7 @@ ABILITIES["nap-al-bubblybounce"] = {
 }
 
 ABILITIES["nap-powerplantmen"] = {
-    id="nap-powerplantmen", name="nap-Powerplant Men", weigths={0.0, 0.0, 0.0, 0.01, 0.05, 0.15},
+    id="nap-powerplantmen", name="nap-Powerplant Men", weigths={0.0, 0.0, 0.0, 0.01, 0.02, 0.15},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-powerplantmen.png",
     fn=function()
         SetRandomSeed( GameGetFrameNum(), GameGetFrameNum() - 523 )
@@ -1029,7 +1052,7 @@ ABILITIES["nap-bundles"] = {
 }
 
 ABILITIES["nap-d-noteleport"] = {
-    id="nap-d-noteleport", name="nap-No Teleport", weigths={0.20, 0.15, 0.30, 0.20, 0.30, 0.10},
+    id="nap-d-noteleport", name="nap-No Teleport", weigths={9.20, 0.15, 0.30, 0.20, 0.30, 0.10},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-noteleport.png",
     fn=function()
         timed_ability("nap-noteleport", 60*80,"mods/Nemesis-Ability-Plus/files/effects/nap-noteleport/effect.xml")
@@ -1108,7 +1131,7 @@ ABILITIES["nap-linearc"] = {
     id="nap-linearc", name="nap-Line Arc", weigths={0.80, 0.80, 0.80, 0.70, 0.60, 0.40},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-linearc.png",
     fn=function()
-        timed_ability("nap-linearc", 60*45,"mods/Nemesis-Ability-Plus/files/effects/nap-linearc/effect.xml")
+        timed_ability("nap-linearc", 60*48,"mods/Nemesis-Ability-Plus/files/effects/nap-linearc/effect.xml")
     end
 }
 
@@ -1180,7 +1203,7 @@ ABILITIES["nap-titres"] = {
     id="nap-titres", name="nap-Titres", weigths={0.10, 0.10, 0.70, 0.90, 0.50, 0.50},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-titres.png",
     fn=function()
-        timed_ability("nap-titres", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.xml")
+        timed_ability("nap-titres", 60*66,"mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.xml")
     end
 }
 
@@ -1213,7 +1236,7 @@ counter_list_full={
     function (counter_time) timed_ability("nap-effectingswapper", 60*math.max(1,math.floor(30*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-effectingswapper/effect.xml")end,
     function (counter_time) timed_ability("nap-fireballray", 60*math.max(1,math.floor(20*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-fireballray/effect.xml")end,
     function (counter_time) timed_ability("nap-bundles", 60*math.max(1,math.floor(12*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-bundles/effect.xml")end,
-    function (counter_time) timed_ability("nap-linearc", 60*math.max(1,math.floor(45*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-linearc/effect.xml")end,
+    function (counter_time) timed_ability("nap-linearc", 60*math.max(1,math.floor(48*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-linearc/effect.xml")end,
     function (counter_time) timed_ability("nap-hookray", 60*math.max(1,math.floor(18*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-hookray/effect.xml")end,
-    function (counter_time) timed_ability("nap-titres", 60*math.max(1,math.floor(60*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.xml")end
+    function (counter_time) timed_ability("nap-titres", 60*math.max(1,math.floor(66*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.xml")end
 }

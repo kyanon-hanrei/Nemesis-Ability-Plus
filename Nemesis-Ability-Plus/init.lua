@@ -1,10 +1,13 @@
 --バージョン表記
-local _Nemesis_Ability_Plus_version = "3.03"
+local _Nemesis_Ability_Plus_version = "3.10"
 function OnPlayerSpawned( player_entity )
 	GlobalsSetValue("Nemesis_Ability_Plus_version", _Nemesis_Ability_Plus_version)
 	--テレポート無しルールの場合の処理
 	local no_teleport_rule = ModSettingGet("Nemesis-Ability-Plus.NAP_NO_TELEPORT_RULE")
 	if no_teleport_rule == true then
+		--テレポ禁止ルール用効果のトリガー用のフラグセット
+		GlobalsSetValue("NAP_NO_TELEPORT_RULE", "1")
+
 		--テレポ禁止の永続状態異常付与
 		local x, y = EntityGetTransform( player_entity )
 		local thingy = EntityLoad("mods/Nemesis-Ability-Plus/files/effects/rule_noteleport/effect.xml", x, y)

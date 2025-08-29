@@ -53,7 +53,7 @@
       explosion_radius="32" 
       explosion_sprite="data/particles/explosion_032.xml" 
       explosion_sprite_lifetime="10" 
-      create_cell_material="swamp" 
+      create_cell_material="lava" 
       create_cell_probability="10" 
       hole_destroy_liquid="0" 
       hole_enabled="1" 
@@ -77,4 +77,11 @@
     </config_explosion>
   </ExplodeOnDamageComponent>
 
+  <CameraBoundComponent
+    max_count="5"
+    distance="40000"
+    freeze_on_distance_kill="0"
+    freeze_on_max_count_kill="0"
+    >
+  </CameraBoundComponent>
 </Entity>

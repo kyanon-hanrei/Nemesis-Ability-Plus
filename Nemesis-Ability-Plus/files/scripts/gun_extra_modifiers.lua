@@ -57,7 +57,7 @@ extra_modifiers["poo_shot"] =
 		c.trail_material = c.trail_material .. "poo_gas,poo,"
 		c.trail_material_amount = c.trail_material_amount + 1
 		c.material = "poo_gas"
-		c.material_amount = c.material_amount + 15
+		c.material_amount = c.material_amount + 8
 	end
 
 extra_modifiers["bundles"] = 

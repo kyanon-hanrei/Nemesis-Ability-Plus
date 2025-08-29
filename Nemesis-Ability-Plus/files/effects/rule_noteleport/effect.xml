@@ -2,7 +2,7 @@
 	
 	<UIIconComponent
 		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-noteleport.png"
-		name="nap-NoTeleportRule"
+		name="NoTeleportRule"
 		description="You are restricted from teleporting."
 		display_above_head="0"
 		display_in_hud="1"

@@ -378,16 +378,16 @@
 		critical_damage_resistance="1.0"
 		blood_sprite_directional=""
 		blood_sprite_large=""
-		minimum_knockback_force="100000"
+		minimum_knockback_force="1000"
 		 >
 		<damage_multipliers
 			projectile="0.05"
-			electricity="3.0"
-			drill="3.0"
+			electricity="5.0"
+			drill="5.0"
 			explosion="3.0"
 			ice="0.05"
 			radioactive="0.0"
-			holy="3.0"
+			holy="5.0"
 			 >
 		</damage_multipliers>
 	</DamageModelComponent>

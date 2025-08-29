@@ -77,4 +77,11 @@
     </config_explosion>
   </ExplodeOnDamageComponent>
 
+  <CameraBoundComponent
+    max_count="5"
+    distance="40000"
+    freeze_on_distance_kill="0"
+    freeze_on_max_count_kill="0"
+    >
+  </CameraBoundComponent>
 </Entity>

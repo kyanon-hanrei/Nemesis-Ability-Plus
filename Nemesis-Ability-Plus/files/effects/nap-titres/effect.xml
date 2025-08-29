@@ -2,7 +2,7 @@
 	
 	<LuaComponent
 		script_source_file="mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.lua"
-		execute_every_n_frame="120"
+		execute_every_n_frame="90"
 	>
 	</LuaComponent>
 

@@ -125,7 +125,10 @@ if not initialized then
         zero_damage = {id="zero_damage"} ,
         longleg = {id="longleg", sprite="data/ui_gfx/animal_icons/longleg.png", misobon=true, entity="data/entities/animals/longleg.xml", delay=20*60},
         barfer = {id="barfer", sprite="data/ui_gfx/animal_icons/barfer.png", misobon=true, entity="data/entities/animals/barfer.xml"},
-        soil = {id="soil", misobon=true, entity="data/entities/projectiles/chunk_of_soil.xml", delay=10*60} 
+        soil = {id="soil", misobon=true, entity="data/entities/projectiles/chunk_of_soil.xml", delay=10*60}, 
+        sea_acid_gas = {id="sea_acid_gas", misobon=true, entity="data/entities/projectiles/deck/sea_acid_gas.xml", delay=20*60}, 
+        summon_rock = {id="summon_rock", misobon=true, entity="data/entities/projectiles/deck/rock.xml", delay=10*60}, 
+        berserk_field = {id="berserk_field", misobon=true, entity="data/entities/projectiles/deck/berserk_field.xml"}  
         --以上、エモート追加処理
     }
 --[[
@@ -191,7 +194,10 @@ if not initialized then
         "heart",
         "longleg",
         "barfer",
-        "soil"
+        "soil",
+        "sea_acid_gas",
+        "summon_rock",
+        "berserk_field"
     }
 
     local function reset_id()

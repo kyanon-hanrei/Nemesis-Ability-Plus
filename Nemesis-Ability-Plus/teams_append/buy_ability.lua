@@ -53,7 +53,7 @@ interacting = function ( entity_who_interacted, entity_interacted, interactable_
 	local dcomps = EntityGetComponent( player_id, "DamageModelComponent" )
 	local hp = 0
 	local max_hp = 0
-	local no_teleport_rule = ModSettingGet("Nemesis-Ability-Plus.NAP_NO_TELEPORT_RULE")
+	local no_teleport_rule = GlobalsGetValue("NAP_NO_TELEPORT_RULE")
 	
 	if NEMESIS.alive ~= false then 
 		if (EntityHasTag( entity_interacted, "NEMESIS_RISKY_ABILITY")) then
@@ -78,7 +78,7 @@ interacting = function ( entity_who_interacted, entity_interacted, interactable_
 			if (EntityHasTag( entity_interacted, "NEMESIS_DANGEROUS_ABILITY")) then
 				ABILITIES[ability].fn()
 				--以下、テレポ禁止ルール時のテレポ禁止のボーナス
-				if (no_teleport_rule == true and ability == "nap-d-noteleport") then
+				if (no_teleport_rule == "1" and ability == "nap-d-noteleport") then
 					noteleport_ability_bonus(x,y,dcomps)
 				end
 				--以上、テレポ禁止ルール時のテレポ禁止のボーナス
@@ -103,7 +103,7 @@ interacting = function ( entity_who_interacted, entity_interacted, interactable_
 			if (EntityHasTag( entity_interacted, "NEMESIS_DANGEROUS_ABILITY")) then
 				ABILITIES[ability].fn()
 				--以下、テレポ禁止ルール時のテレポ禁止のボーナス
-				if (no_teleport_rule == true and ability == "nap-d-noteleport") then
+				if (no_teleport_rule == "1" and ability == "nap-d-noteleport") then
 					noteleport_ability_bonus(x,y,dcomps)
 				end
 				--以上、テレポ禁止ルール時のテレポ禁止のボーナス
@@ -159,7 +159,7 @@ function noteleport_ability_bonus(x,y,dcomps)
 		end
 	end
 	local remove_timer = false
-	for i = 1,3 do
+	for i = 1,7 do
 		load_gold_entity( "data/entities/items/pickup/goldnugget_50.xml", x + Random(-10,10), y - 4 + Random(-10,5), remove_timer )
 	end
 end
