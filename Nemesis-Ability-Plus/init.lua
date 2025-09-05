@@ -1,5 +1,5 @@
 --バージョン表記
-local _Nemesis_Ability_Plus_version = "3.10"
+local _Nemesis_Ability_Plus_version = "3.11"
 function OnPlayerSpawned( player_entity )
 	GlobalsSetValue("Nemesis_Ability_Plus_version", _Nemesis_Ability_Plus_version)
 	--テレポート無しルールの場合の処理
@@ -14,10 +14,8 @@ function OnPlayerSpawned( player_entity )
 		EntityAddChild(player_entity, thingy)
 
 		--テレポ液を不安定テレポ液に変換する処理
-		--local water = CellFactory_GetType( "water" )
 		local teleportatium = CellFactory_GetType( "magic_liquid_teleportation" )
 		local u_teleportatium = CellFactory_GetType( "magic_liquid_unstable_teleportation" )
-		--ConvertMaterialEverywhere( u_teleportatium, water )
 		ConvertMaterialEverywhere( teleportatium, u_teleportatium )
 	end
 end

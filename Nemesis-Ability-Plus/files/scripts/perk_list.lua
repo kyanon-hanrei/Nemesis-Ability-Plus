@@ -29,8 +29,9 @@ end
 remove_perk( "INVISIBILITY" )
 remove_perk( "GAMBLE" )
 
---テレポート禁止ルールにしている場合、瞬間移動を消す処理
-local no_teleport_rule = GlobalsGetValue("NAP_NO_TELEPORT_RULE")
-if no_teleport_rule == "1" then
+
+local no_teleport_rule = ModSettingGet("Nemesis-Ability-Plus.NAP_NO_TELEPORT_RULE")
+if no_teleport_rule == true then
+	--テレポート禁止ルールにしている場合、瞬間移動を消す処理
 	remove_perk( "TELEPORTITIS" )
 end

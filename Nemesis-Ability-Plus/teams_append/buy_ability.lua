@@ -151,6 +151,8 @@ interacting = function ( entity_who_interacted, entity_interacted, interactable_
 end
 
 function noteleport_ability_bonus(x,y,dcomps)
+	--ステータスを直接書き換える形ではなく、アイテム出現に変更
+	--[[
 	if ( dcomps ~= nil ) then
 		for i,comp in ipairs( dcomps ) do
 			max_hp = ComponentGetValue2( comp, "max_hp" )
@@ -158,8 +160,15 @@ function noteleport_ability_bonus(x,y,dcomps)
 			ComponentSetValue2( comp, "max_hp", max_hp )
 		end
 	end
+	]]
+	EntityLoad( "data/entities/items/pickup/heart.xml", x + Random(-10,10), y - 4 + Random(-10,5))
+
 	local remove_timer = false
-	for i = 1,7 do
-		load_gold_entity( "data/entities/items/pickup/goldnugget_50.xml", x + Random(-10,10), y - 4 + Random(-10,5), remove_timer )
+	for i = 1,8 do
+		if (i <= 5) then
+			load_gold_entity( "data/entities/items/pickup/goldnugget_50.xml", x + Random(-10,10), y - 4 + Random(-10,5), remove_timer )
+		else
+			load_gold_entity( "data/entities/items/pickup/goldnugget_10.xml", x + Random(-10,10), y - 4 + Random(-10,5), remove_timer )
+		end
 	end
 end

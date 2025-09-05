@@ -137,6 +137,7 @@ end
 --以上、コルミシルマを倒したプレイヤーの通知用
 
 --以下、テレポート禁止ルールを他のプレイヤーにも適用する処理
+--[[
 customEvents["WeCantUseTeleportation"] = function(data)
     if (GlobalsGetValue("NAP_NO_TELEPORT_RULE") ~= "1") then
         --テレポ禁止ルール用効果のトリガー用のフラグセット
@@ -149,15 +150,14 @@ customEvents["WeCantUseTeleportation"] = function(data)
 		EntityAddChild(player_entity, thingy)
 
 		--テレポ液を不安定テレポ液に変換する処理
-		--local water = CellFactory_GetType( "water" )
 		local teleportatium = CellFactory_GetType( "magic_liquid_teleportation" )
 		local u_teleportatium = CellFactory_GetType( "magic_liquid_unstable_teleportation" )
-		--ConvertMaterialEverywhere( u_teleportatium, water )
 		ConvertMaterialEverywhere( teleportatium, u_teleportatium )
 
         GamePrintImportant("Teleportation has been sealed")
     end
 end
+]]
 --以上、テレポート禁止ルールを他のプレイヤーにも適用する処理
 
 --以下、旧Fix、Teamsの再現

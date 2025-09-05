@@ -185,11 +185,13 @@ function StartRun()
 				end
 				--以上、プレイヤーリストを開始時に自動で開く処理
                 --以下、テレポート禁止ルールを他のプレイヤーにも適用する処理
+                --[[
                 if (GlobalsGetValue("NAP_NO_TELEPORT_RULE") == "1") then
                     local queue = json.decode(NT.wsQueue)
-                    table.insert(queue, {event="CustomModEvent", payload={name="WeCantUseTeleportation", number=0}})
+                    table.insert(queue, {event="CustomModEvent", payload={name="WeCantUseTeleportation"}})
                     NT.wsQueue = json.encode(queue)
                 end
+                ]]
                 --以上、テレポート禁止ルールを他のプレイヤーにも適用する処理
 			end
             ComponentSetValue2(controls_component, "enabled", true)
