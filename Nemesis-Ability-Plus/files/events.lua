@@ -921,15 +921,16 @@ ABILITIES["nap-al-fakeitems"] = {
 		local lod_x = 0
 		local lod_y = 0
         local fake_items_list={}
-		for i = 1 , 30 do
+		for i = 1 , 40 do
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_chest.xml")
 		end
-		for i = 1 , 20 do
+		for i = 1 , 25 do
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_heart.xml")
 		end
-		for i = 1 , 5 do
+		for i = 1 , 10 do
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_spell_refresh.xml")
 		end
+		--[[
 		for i = 1 , 4 do
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_spells_luminous_drill.xml")
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_spells_chainsaw.xml")
@@ -963,6 +964,7 @@ ABILITIES["nap-al-fakeitems"] = {
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_spells_pingpong_path.xml")
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_spells_electric_charge.xml")
 		end
+		]]
 		local player = get_player()
 		if (player == nil) then return end 
 		local pos_x, pos_y = EntityGetTransform( player )
@@ -1204,6 +1206,48 @@ ABILITIES["nap-titres"] = {
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-titres.png",
     fn=function()
         timed_ability("nap-titres", 60*66,"mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.xml")
+    end
+}
+
+ABILITIES["nap-al-deathworm"] = {
+    id="nap-al-deathworm", name="nap-Death Worm", weigths={0.01, 0.05, 0.20, 0.40, 0.15, 0.80},
+	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-deathworm.png",
+    fn=function()
+        timed_ability("nap-deathworm", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-deathworm/effect.xml")
+		spawn_entity_in_view_random_angle("data/entities/animals/worm_skull.xml", 40, 200, 0, function(eid)
+			EntityAddTag(eid, "NEMESIS_ENEMY")
+			entity_attack_timer(eid, 20000)
+		end)
+    end
+}
+
+ABILITIES["nap-whitechristmas"] = {
+    id="nap-whitechristmas", name="nap-White Christmas", weigths={0.15, 0.25, 0.45, 0.35, 0.65, 0.10},
+	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-whitechristmas.png",
+    fn=function()
+        local player = get_player()
+        if (player == nil) then return end 
+        local pos_x, pos_y, rot = EntityGetTransform( player )
+        local theta = rot + (( 2 * 3.14159 ) /Random(1, 12))
+		local j = Random( 1 , 2)
+            local bid = shoot_projectile( entity_id, "mods/Nemesis-Ability-Plus/files/entities/projectiles/white_christmas_sled.xml", pos_x + math.cos( theta ) * 12 * (( -1 )^ j ), pos_y - math.sin( theta ) * 12, 0, 0 )
+            
+    end
+}
+
+ABILITIES["nap-al-enemyconfusion"] = {
+    id="nap-al-enemyconfusion", name="nap-Enemy Confusion", weigths={0.2, 0.3, 0.1, 0.2, 0.3, 0.2},
+	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-enemyconfusion.png",
+    fn=function()
+        timed_ability("nap-enemyconfusion", 60*45,"mods/Nemesis-Ability-Plus/files/effects/nap-enemyconfusion/effect.xml")
+    end
+}
+
+ABILITIES["nap-floatingarc"] = {
+    id="nap-floatingarc", name="nap-Floating Arc", weigths={0.70, 0.50, 0.60, 0.50, 0.50, 0.40},
+	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-floatingarc.png",
+    fn=function()
+        timed_ability("nap-floatingarc", 60*40,"mods/Nemesis-Ability-Plus/files/effects/nap-floatingarc/effect.xml")
     end
 }
 

@@ -80,3 +80,8 @@ extra_modifiers["line_arc"] =
 	function()
 		c.extra_entities = c.extra_entities .. "data/entities/misc/line_arc.xml,"
 	end
+		
+extra_modifiers["floating_arc"] =
+	function()
+		c.extra_entities = c.extra_entities .. "data/entities/misc/floating_arc.xml,"
+	end

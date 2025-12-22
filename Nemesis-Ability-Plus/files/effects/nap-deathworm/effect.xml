@@ -1,0 +1,21 @@
+<Entity name="nemesis_nap-deathworm">
+	<InheritTransformComponent 
+		_enabled="1" >
+    </InheritTransformComponent>
+    
+    <GameEffectComponent 
+        effect="WORM_ATTRACTOR"
+        frames="600"
+    >
+	</GameEffectComponent>
+	
+	<UIIconComponent
+		icon_sprite_file="data/ui_gfx/status_indicators/worm_attractor.png"
+		name="$status_worm_attractor"
+		description="$statusdesc_worm_attractor"
+		display_above_head="0"
+		display_in_hud="1"
+		is_perk="0"
+		>
+	</UIIconComponent>
+</Entity>

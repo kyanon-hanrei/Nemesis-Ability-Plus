@@ -39,7 +39,7 @@
 
 		
 		<ParticleEmitterComponent 
-			emitted_material_name="oil"
+			emitted_material_name="snow_sticky"
 			offset.x="0"
 			offset.y="3"
 			x_pos_offset_min="0"
@@ -52,9 +52,9 @@
 			y_vel_max="0"
 			count_min="1"
 			count_max="10"
-			emission_interval_min_frames="2"
-			emission_interval_max_frames="3"
-			image_animation_file="data/particles/image_emitters/cloud_bottom.png"
+			emission_interval_min_frames="1"
+			emission_interval_max_frames="1"
+			image_animation_file="mods/Nemesis-Ability-Plus/files/particles/image_emitters/sled_bottom.png"
 			image_animation_loop="1"
 			emit_cosmetic_particles="0"
 			collide_with_gas_and_fire="0"
@@ -62,7 +62,7 @@
 		</ParticleEmitterComponent>
 
 		<ParticleEmitterComponent 
-			emitted_material_name="smoke"
+			emitted_material_name="spark_green"
 			offset.x="0"
 			offset.y="0"
 			x_pos_offset_min="-1"
@@ -80,17 +80,17 @@
 			lifetime_max="0.5"
 			airflow_force="1.0"
 			render_on_grid="1"
-			emission_interval_min_frames="12"
-			emission_interval_max_frames="12"
-			image_animation_file="data/particles/image_emitters/cloud.png"
+			emission_interval_min_frames="20"
+			emission_interval_max_frames="25"
+			image_animation_file="mods/Nemesis-Ability-Plus/files/particles/image_emitters/sled.png"
 			image_animation_loop="1"
-			emit_cosmetic_particles="1"
+			emit_cosmetic_particles="0"
 			create_real_particles="0" 
 			is_emitting="0">
 		</ParticleEmitterComponent>
 
 		<ParticleEmitterComponent 
-			emitted_material_name="fire"
+			emitted_material_name="spark_red"
 			offset.x="0"
 			offset.y="0"
 			x_pos_offset_min="0"
@@ -107,17 +107,17 @@
 			lifetime_min="0.2"
 			lifetime_max="0.5"
 			render_on_grid="1"
-			emission_interval_min_frames="8"
-			emission_interval_max_frames="15"
-			image_animation_file="data/particles/image_emitters/cloud.png"
+			emission_interval_min_frames="15"
+			emission_interval_max_frames="20"
+			image_animation_file="mods/Nemesis-Ability-Plus/files/particles/image_emitters/sled.png"
 			image_animation_loop="1"
 			emit_cosmetic_particles="0"
-			create_real_particles="1"
+			create_real_particles="0"
 			is_emitting="1" >
 		</ParticleEmitterComponent>
 
 		<ParticleEmitterComponent 
-			emitted_material_name="oil"
+			emitted_material_name="spark_green"
 			offset.x="0"
 			offset.y="0"
 			x_pos_offset_min="0"
@@ -138,10 +138,10 @@
 			airflow_time="0.1"
 			render_on_grid="1"
 			cosmetic_force_create="1"
-			emission_interval_min_frames="4"
-			emission_interval_max_frames="4"
+			emission_interval_min_frames="2"
+			emission_interval_max_frames="3"
 			collide_with_grid="0"
-			image_animation_file="data/particles/image_emitters/cloud_outline.png"
+			image_animation_file="mods/Nemesis-Ability-Plus/files/particles/image_emitters/sled_outline.png"
 			image_animation_loop="1"
 			emit_cosmetic_particles="1"
 			create_real_particles="0" >
@@ -169,9 +169,9 @@
 			airflow_time="0.1"
 			render_on_grid="1"
 			cosmetic_force_create="0"
-			emission_interval_min_frames="15"
-			emission_interval_max_frames="20"
-			image_animation_file="data/particles/image_emitters/cloud_outline.png"
+			emission_interval_min_frames="10"
+			emission_interval_max_frames="12"
+			image_animation_file="mods/Nemesis-Ability-Plus/files/particles/image_emitters/sled_outline.png"
 			image_animation_loop="1"
 			emit_cosmetic_particles="1"
 			create_real_particles="0" >
@@ -179,8 +179,8 @@
 		
 		<LuaComponent 
 			_enabled="1" 
-			script_source_file="mods/Nemesis-Ability-Plus/files/effects/nap-incendiarycloud/rain_bomber.lua" 
-			execute_every_n_frame="90">
+			script_source_file="mods/Nemesis-Ability-Plus/files/effects/nap-whitechristmas/sled_presenter.lua" 
+			execute_every_n_frame="60">
 		</LuaComponent>
 	</Entity>
 

@@ -151,8 +151,8 @@ function noteleport_ability_bonus(x,y,dcomps)
 	EntityLoad( "data/entities/items/pickup/heart.xml", x + Random(-10,10), y - 4 + Random(-10,5))
 
 	local remove_timer = false
-	for i = 1,8 do
-		if (i <= 5) then
+	for i = 1,6 do
+		if (i <= 4) then
 			load_gold_entity( "data/entities/items/pickup/goldnugget_50.xml", x + Random(-10,10), y - 4 + Random(-10,5), remove_timer )
 		else
 			load_gold_entity( "data/entities/items/pickup/goldnugget_10.xml", x + Random(-10,10), y - 4 + Random(-10,5), remove_timer )

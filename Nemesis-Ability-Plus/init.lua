@@ -1,5 +1,5 @@
 --バージョン表記
-local _Nemesis_Ability_Plus_version = "3.11"
+local _Nemesis_Ability_Plus_version = "3.20"
 function OnPlayerSpawned( player_entity )
 	GlobalsSetValue("Nemesis_Ability_Plus_version", _Nemesis_Ability_Plus_version)
 	--テレポート無しルールの場合の処理
