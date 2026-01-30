@@ -697,7 +697,7 @@ ABILITIES["nap-glassparty"] = {
 }
 
 ABILITIES["nap-partsofomega1"] = {
-    id="nap-partsofomega1", name="nap-Parts of Omega1", weigths={0.2, 0.6, 0.0, 0.0, 0.01, 0.03},
+    id="nap-partsofomega1", name="nap-Parts of Omega1", weigths={0.2, 0.7, 0.0, 0.0, 0.01, 0.03},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-partsofomega1.png",
     fn=function()
         SetRandomSeed( GameGetFrameNum(), GameGetFrameNum() - 523 )
@@ -753,7 +753,7 @@ ABILITIES["nap-partsofomega1"] = {
 }
 
 ABILITIES["nap-partsofomega2"] = {
-    id="nap-partsofomega2", name="nap-Parts of Omega2", weigths={0.2, 0.0, 0.6, 0.0, 0.01, 0.03},
+    id="nap-partsofomega2", name="nap-Parts of Omega2", weigths={0.2, 0.0, 0.7, 0.0, 0.01, 0.03},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-partsofomega2.png",
     fn=function()
         SetRandomSeed( GameGetFrameNum(), GameGetFrameNum() - 523 )
@@ -809,7 +809,7 @@ ABILITIES["nap-partsofomega2"] = {
 }
 
 ABILITIES["nap-partsofomega3"] = {
-    id="nap-partsofomega3", name="nap-Parts of Omega3", weigths={0.2, 0.0, 0.0, 0.6, 0.01, 0.03},
+    id="nap-partsofomega3", name="nap-Parts of Omega3", weigths={0.2, 0.0, 0.0, 0.7, 0.01, 0.03},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-partsofomega3.png",
     fn=function()
         SetRandomSeed( GameGetFrameNum(), GameGetFrameNum() - 523 )
@@ -1054,7 +1054,7 @@ ABILITIES["nap-bundles"] = {
 }
 
 ABILITIES["nap-d-noteleport"] = {
-    id="nap-d-noteleport", name="nap-No Teleport", weigths={9.20, 0.15, 0.30, 0.20, 0.30, 0.10},
+    id="nap-d-noteleport", name="nap-No Teleport", weigths={0.20, 0.15, 0.30, 0.20, 0.30, 0.10},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-noteleport.png",
     fn=function()
         timed_ability("nap-noteleport", 60*80,"mods/Nemesis-Ability-Plus/files/effects/nap-noteleport/effect.xml")
@@ -1114,7 +1114,7 @@ ABILITIES["nap-al-mixingrubbish"] = {
                 local flask_comp = EntityGetFirstComponentIncludingDisabled(item_id, "MaterialInventoryComponent")
                 if flask_comp ~= nil then
                     local potion_material = random_from_array(rubbishes)
-                    AddMaterialInventoryMaterial(item_id, potion_material, 120)
+                    AddMaterialInventoryMaterial(item_id, potion_material, 360)
                 end
             end
         end
@@ -1125,7 +1125,7 @@ ABILITIES["nap-d-sealedmattereater"] = {
     id="nap-d-sealedmattereater", name="nap-Sealed Matter Eater", weigths={0.00, 0.00, 0.20, 0.10, 0.25, 0.15},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-sealedmattereater.png",
     fn=function()
-        timed_ability("nap-sealedmattereater", 60*96,"mods/Nemesis-Ability-Plus/files/effects/nap-sealedmattereater/effect.xml")
+        timed_ability("nap-sealedmattereater", 60*120,"mods/Nemesis-Ability-Plus/files/effects/nap-sealedmattereater/effect.xml")
     end
 }
 

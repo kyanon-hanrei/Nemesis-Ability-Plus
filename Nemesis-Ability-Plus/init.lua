@@ -1,5 +1,5 @@
 --バージョン表記
-local _Nemesis_Ability_Plus_version = "3.20"
+local _Nemesis_Ability_Plus_version = "3.30"
 function OnPlayerSpawned( player_entity )
 	GlobalsSetValue("Nemesis_Ability_Plus_version", _Nemesis_Ability_Plus_version)
 	--テレポート無しルールの場合の処理
@@ -111,3 +111,7 @@ ModLuaFileAppend("mods/noita-nemesis/files/death.lua", "mods/Nemesis-Ability-Plu
 --NP表示に各山の消費ポイントを加える処理関係の上書き
 ModTextFileSetContent("mods/noita-nemesis/files/scripts/ui.lua", "-- noop\n")
 ModLuaFileAppend("mods/noita-nemesis/files/scripts/ui.lua", "mods/Nemesis-Ability-Plus/files/scripts/ui.lua")
+
+--リスポーン判定を拡大する処理関係の上書き
+ModTextFileSetContent("mods/noita-together/files/append/co_op_mail.lua", "-- noop\n")
+ModLuaFileAppend("mods/noita-together/files/append/co_op_mail.lua", "mods/Nemesis-Ability-Plus/files/append/co_op_mail.lua")

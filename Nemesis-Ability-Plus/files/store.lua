@@ -19,4 +19,5 @@ if (NEMESIS.initialized ~= true) then
 	NEMESIS.np_reroll_count = 1
     NEMESIS.initialized = true
 	NEMESIS.helpful_booster_count = 0
+	NEMESIS.attacked_count = 0
 end
