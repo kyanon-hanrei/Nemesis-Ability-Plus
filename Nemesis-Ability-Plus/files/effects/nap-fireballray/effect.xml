@@ -4,7 +4,7 @@
 	<LuaComponent 
 		_enabled="1" 
 		script_source_file="mods/Nemesis-Ability-Plus/files/scripts/projectiles/fireball_ray_nap.lua" 
-		execute_every_n_frame="20">
+		execute_every_n_frame="16">
 	</LuaComponent>
 	
 	<UIIconComponent

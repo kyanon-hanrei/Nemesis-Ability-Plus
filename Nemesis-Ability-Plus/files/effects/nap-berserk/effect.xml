@@ -1,0 +1,19 @@
+<Entity name="nemesis_nap-berserk">
+	<InheritTransformComponent>
+    </InheritTransformComponent>	
+
+	<GameEffectComponent 
+		effect="BERSERK"
+		frames="-1">
+	</GameEffectComponent>
+
+    <UIIconComponent
+		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-berserk.png"
+		name="$status_berserk"
+		description="$statusdesc_berserk"
+		display_above_head="1"
+		display_in_hud="1"
+		is_perk="0"
+    >
+	</UIIconComponent>
+</Entity>

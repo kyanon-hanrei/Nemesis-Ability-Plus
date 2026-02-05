@@ -9,6 +9,12 @@
 		is_perk="0"
 	>
 	</UIIconComponent>
+	
+	<LuaComponent 
+		_enabled="1" 
+		script_shot="mods/Nemesis-Ability-Plus/files/scripts/projectiles/sealed_matter_eater_shot.lua" 
+		execute_every_n_frame="-1">
+	</LuaComponent>
 
 	<ShotEffectComponent
 		extra_modifier="sealed_matter_eater"

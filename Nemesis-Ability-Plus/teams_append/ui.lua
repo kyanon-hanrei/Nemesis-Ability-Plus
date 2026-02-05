@@ -100,7 +100,7 @@ if not initialized then
         baab_love = {id="baab_love"} ,
         baab_poop = {id="baab_poop"} ,
         baab_water = {id="baab_water"} ,
-        bomb = {id="bomb", misobon=true, entity="mods/noita-nemesis-teams/entities/helpful_bomb.xml", delay=20*60} ,
+        bomb = {id="bomb", misobon=true, entity="mods/noita-nemesis-teams/entities/helpful_bomb.xml", delay=16*60} ,
         bank = {id="bank", sprite="mods/noita-nemesis-teams/ui/emote/bank.png"},
         heart = {id="heart", sprite="mods/noita-nemesis-teams/ui/emote/heart.png",
                     misobon=true, entity="mods/noita-nemesis-teams/entities/misobon_heart.xml"
@@ -123,11 +123,11 @@ if not initialized then
         misfire_critical = {id="misfire_critical"} ,
         telepathy_field = {id="telepathy_field"} ,
         zero_damage = {id="zero_damage"} ,
-        longleg = {id="longleg", sprite="data/ui_gfx/animal_icons/longleg.png", misobon=true, entity="data/entities/animals/longleg.xml", delay=20*60},
+        longleg = {id="longleg", sprite="data/ui_gfx/animal_icons/longleg.png", misobon=true, entity="data/entities/animals/longleg.xml", delay=16*60},
         barfer = {id="barfer", sprite="data/ui_gfx/animal_icons/barfer.png", misobon=true, entity="data/entities/animals/barfer.xml"},
-        soil = {id="soil", misobon=true, entity="data/entities/projectiles/chunk_of_soil.xml", delay=10*60}, 
-        sea_acid_gas = {id="sea_acid_gas", misobon=true, entity="data/entities/projectiles/deck/sea_acid_gas.xml", delay=20*60}, 
-        summon_rock = {id="summon_rock", misobon=true, entity="data/entities/projectiles/deck/rock.xml", delay=10*60}, 
+        soil = {id="soil", misobon=true, entity="data/entities/projectiles/chunk_of_soil.xml", delay=6*60}, 
+        sea_acid_gas = {id="sea_acid_gas", misobon=true, entity="data/entities/projectiles/deck/sea_acid_gas.xml", delay=16*60}, 
+        summon_rock = {id="summon_rock", misobon=true, entity="data/entities/projectiles/deck/rock.xml", delay=6*60}, 
         berserk_field = {id="berserk_field", misobon=true, entity="data/entities/projectiles/deck/berserk_field.xml"}  
         --以上、エモート追加処理
     }

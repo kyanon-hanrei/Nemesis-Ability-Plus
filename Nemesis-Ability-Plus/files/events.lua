@@ -1251,6 +1251,23 @@ ABILITIES["nap-floatingarc"] = {
     end
 }
 
+ABILITIES["nap-d-berserk"] = {
+    id="nap-d-berserk", name="nap-Berserk", weigths={0.40, 0.30, 0.40, 0.30, 0.40, 0.30},
+	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-berserk.png",
+    fn=function()
+        timed_ability("nap-berserk", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-berserk/effect.xml")
+    end
+}
+
+ABILITIES["nap-d-loveandpeace"] = {
+    id="nap-d-loveandpeace", name="nap-Love And Peace", weigths={0.05, 0.05, 0.05, 0.10, 0.10, 0.05},
+	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-loveandpeace.png",
+    fn=function()
+        local x,y = get_player_pos()
+        EntityLoad("mods/Nemesis-Ability-Plus/files/entities/nap-loveandpeace/entity.xml", x, y)
+    end
+}
+
 counter_list_full={
     function (counter_time) timed_ability("grounded", 60*math.floor(6*counter_time)) end,
     function (counter_time) timed_ability("confusion", 60*math.floor(15*counter_time)) end,

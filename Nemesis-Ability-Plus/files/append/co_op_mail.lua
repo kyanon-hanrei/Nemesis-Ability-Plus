@@ -11,9 +11,9 @@ function spawn_hp(x, y)
         LoadPixelScene("mods/noita-together/files/pixel_scenes/co_op_mail.png", "", x - 49, y, "", true)
         local checkpoint = EntityCreateNew("co_op_checkpoint")
         EntityAddComponent(checkpoint, "CollisionTriggerComponent", {
-            width="250",
+            width="500",
             height="150",
-            radius="256",
+            radius="512",
             destroy_this_entity_when_triggered="0",
             required_tag="player_unit"
         })--[[元、width="20",height="100",radius="64"]]
