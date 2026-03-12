@@ -4,7 +4,7 @@
 	<LuaComponent 
 		_enabled="1" 
 		script_source_file="mods/Nemesis-Ability-Plus/files/scripts/projectiles/hook_ray.lua" 
-		execute_every_n_frame="90">
+		execute_every_n_frame="80">
 	</LuaComponent>
 	
 	<UIIconComponent

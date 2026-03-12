@@ -30,6 +30,7 @@
     camera_shake_when_shot="15.0"
 	velocity_sets_rotation="1"
     bounces_left="1"
+    friendly_fire="1"
 	muzzle_flash_file="data/entities/particles/muzzle_flashes/muzzle_flash_launcher.xml"
     shoot_light_flash_radius="120"
 	shoot_light_flash_r="255"

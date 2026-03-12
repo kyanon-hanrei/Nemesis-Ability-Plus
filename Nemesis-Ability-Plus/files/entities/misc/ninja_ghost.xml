@@ -60,7 +60,7 @@
 		auto_play="1">
 	</AudioLoopComponent>
 	<LifetimeComponent
-		lifetime="2700"
+		lifetime="2400"
 		>
 	</LifetimeComponent>
 </Entity>

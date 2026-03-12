@@ -4,7 +4,8 @@ extra_modifiers["high_recoil"] =
 		SetRandomSeed( GameGetFrameNum(), GameGetFrameNum() - 523 )
 		shot_effects.recoil_knockback = 0
 		shot_effects.recoil_knockback = shot_effects.recoil_knockback + Random(80, 200)*((-1)^Random(0, 1))
-		c.spread_degrees = c.spread_degrees + 4.0
+		c.fire_rate_wait   = c.fire_rate_wait + 2
+		c.spread_degrees = c.spread_degrees + 8.0
 	end
 
 extra_modifiers["sluggish_shot"] =

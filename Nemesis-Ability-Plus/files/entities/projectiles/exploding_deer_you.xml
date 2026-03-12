@@ -123,7 +123,7 @@
 		  create_cell_material="fire" 
 		  ray_energy="170000"
 		  hole_destroy_liquid="0" 
-		  damage="1.8"
+		  damage="2.8"
 		  hole_enabled="1" 
 		  hole_image="data/temp/explosion_hole.png" 
 		  particle_effect="1" 

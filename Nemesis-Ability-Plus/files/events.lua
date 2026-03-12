@@ -285,7 +285,7 @@ ABILITIES["nap-al-blindness"] = {
     id="nap-al-blindness", name="nap-Blindness", weigths={0.85, 0.40, 0.60, 0.85, 0.30, 0.50},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-blindness.png",
     fn=function()
-        timed_ability("nap-blindness", 60*10,"mods/Nemesis-Ability-Plus/files/effects/nap-blindness/effect.xml")
+        timed_ability("nap-blindness", 60*12,"mods/Nemesis-Ability-Plus/files/effects/nap-blindness/effect.xml")
     end
 }
 ABILITIES["nap-al-explosive-projectile"] = {
@@ -421,14 +421,14 @@ ABILITIES["nap-al-drinkingparty"] = {
     id="nap-al-drinkingparty", name="nap-Drinking Party", weigths={0.85, 0.40, 0.85, 0.40, 0.50, 0.40},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-drinkingparty.png",
     fn=function()
-        timed_ability("nap-drinkingparty", 60*20,"mods/Nemesis-Ability-Plus/files/effects/nap-drinkingparty/effect.xml")
+        timed_ability("nap-drinkingparty", 60*24,"mods/Nemesis-Ability-Plus/files/effects/nap-drinkingparty/effect.xml")
     end
 }
 ABILITIES["nap-enemyinvisible"] = {
     id="nap-enemyinvisible", name="nap-Enemy Invisible", weigths={0.50, 0.60, 0.85, 0.60, 0.50, 0.60},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-enemyinvisible.png",
     fn=function()
-		timed_ability("nap-enemyinvisible", 60*45,"mods/Nemesis-Ability-Plus/files/effects/nap-enemyinvisible/effect.xml")
+		timed_ability("nap-enemyinvisible", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-enemyinvisible/effect.xml")
     end
 }
 ABILITIES["nap-al-morerecoil"] = {
@@ -446,10 +446,10 @@ ABILITIES["nap-powerrangers"] = {
     end
 }
 ABILITIES["nap-al-theilluminati"] = {
-    id="nap-al-theilluminati", name="nap-The Illuminati", weigths={0.10, 0.20, 0.30, 0.10, 0.85, 0.20},
+    id="nap-al-theilluminati", name="nap-The Illuminati", weigths={0.10, 0.30, 0.50, 0.10, 0.85, 0.20},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-theilluminati.png",
     fn=function()
-        timed_ability("nap-theilluminati", 60*45,"mods/Nemesis-Ability-Plus/files/effects/nap-theilluminati/effect.xml")
+        timed_ability("nap-theilluminati", 60*68,"mods/Nemesis-Ability-Plus/files/effects/nap-theilluminati/effect.xml")
     end
 }
 ABILITIES["nap-lavasea"] = {
@@ -490,7 +490,7 @@ ABILITIES["nap-sluggishwand"] = {
     id="nap-sluggishwand", name="nap-Sluggish Wand", weigths={0.10, 0.10, 0.40, 0.20, 0.40, 0.40},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-sluggishwand.png",
     fn=function()
-        timed_ability("nap-sluggishwand", 60*25,"mods/Nemesis-Ability-Plus/files/effects/nap-sluggishwand/effect.xml")
+        timed_ability("nap-sluggishwand", 60*30,"mods/Nemesis-Ability-Plus/files/effects/nap-sluggishwand/effect.xml")
     end
 }
 ABILITIES["nap-al-konna"] = {
@@ -574,7 +574,7 @@ ABILITIES["nap-fizzledonesgrudge"] = {
             NEMESIS.fizzled_count = 0
         end
 		SetRandomSeed( GameGetFrameNum(), GameGetFrameNum() - 523 )
-		local counter_time = 0.4 + (NEMESIS.fizzled_count * 0.8)
+		local counter_time = 0.6 + (NEMESIS.fizzled_count * 0.8)
 		local counter_list = counter_list_full
 		local fc_amount = math.min(NEMESIS.fizzled_count + 1, #counter_list)
 		for i = 1,fc_amount do
@@ -642,7 +642,7 @@ ABILITIES["nap-al-bubblybounce"] = {
     id="nap-al-bubblybounce", name="nap-Bubbly Bounce", weigths={0.6, 0.1, 0.85, 0.1, 0.0, 0.2},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-bubblybounce.png",
     fn=function()
-		timed_ability("nap-bubblybounce", 60*30,"mods/Nemesis-Ability-Plus/files/effects/nap-bubblybounce/effect.xml")
+		timed_ability("nap-bubblybounce", 60*36,"mods/Nemesis-Ability-Plus/files/effects/nap-bubblybounce/effect.xml")
     end
 }
 
@@ -685,7 +685,7 @@ ABILITIES["nap-al-moreknockback"] = {
     id="nap-al-moreknockback", name="nap-More Knockback", weigths={0.20, 0.50, 0.20, 0.80, 0.40, 0.30},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-moreknockback.png",
     fn=function()
-        timed_ability("nap-moreknockback", 60*45,"mods/Nemesis-Ability-Plus/files/effects/nap-moreknockback/effect.xml")
+        timed_ability("nap-moreknockback", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-moreknockback/effect.xml")
     end
 }
 ABILITIES["nap-glassparty"] = {
@@ -921,13 +921,13 @@ ABILITIES["nap-al-fakeitems"] = {
 		local lod_x = 0
 		local lod_y = 0
         local fake_items_list={}
-		for i = 1 , 40 do
+		for i = 1 , 45 do
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_chest.xml")
 		end
-		for i = 1 , 25 do
+		for i = 1 , 30 do
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_heart.xml")
 		end
-		for i = 1 , 10 do
+		for i = 1 , 20 do
 			table.insert(fake_items_list, "mods/Nemesis-Ability-Plus/files/entities/items/fake_items/fake_spell_refresh.xml")
 		end
 		--[[
@@ -1004,7 +1004,7 @@ ABILITIES["nap-al-invisprojectiles"] = {
     id="nap-al-invisprojectiles", name="nap-Invis Projectiles", weigths={0.90, 0.10, 0.40, 0.30, 0.20, 0.10},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-invisprojectiles.png",
     fn=function()
-        timed_ability("nap-invisprojectiles", 60*90,"mods/Nemesis-Ability-Plus/files/effects/nap-invisprojectiles/effect.xml")
+        timed_ability("nap-invisprojectiles", 60*105,"mods/Nemesis-Ability-Plus/files/effects/nap-invisprojectiles/effect.xml")
     end
 }
 ABILITIES["nap-effectingswapper"] = {
@@ -1018,7 +1018,7 @@ ABILITIES["nap-fireballray"] = {
     id="nap-fireballray", name="nap-Fireball Ray", weigths={0.10, 0.20, 0.50, 0.40, 0.30, 0.20},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-fireballray.png",
     fn=function()
-        timed_ability("nap-fireballray", 60*20,"mods/Nemesis-Ability-Plus/files/effects/nap-fireballray/effect.xml")
+        timed_ability("nap-fireballray", 60*24,"mods/Nemesis-Ability-Plus/files/effects/nap-fireballray/effect.xml")
     end
 }
 
@@ -1057,7 +1057,7 @@ ABILITIES["nap-d-noteleport"] = {
     id="nap-d-noteleport", name="nap-No Teleport", weigths={0.20, 0.15, 0.30, 0.20, 0.30, 0.10},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-noteleport.png",
     fn=function()
-        timed_ability("nap-noteleport", 60*80,"mods/Nemesis-Ability-Plus/files/effects/nap-noteleport/effect.xml")
+        timed_ability("nap-noteleport", 60*120,"mods/Nemesis-Ability-Plus/files/effects/nap-noteleport/effect.xml")
     end
 }
 
@@ -1079,7 +1079,7 @@ ABILITIES["nap-d-neo-fizzledonesgrudge"] = {
             NEMESIS.fizzled_count = 0
         end
 		SetRandomSeed( GameGetFrameNum(), GameGetFrameNum() - 523 )
-		local counter_time = ((NEMESIS.fizzled_count + 1) * 0.9 ) - 0.2
+		local counter_time = ((NEMESIS.fizzled_count + 1) * 0.9 ) - 0.1
 		local counter_list = counter_list_full
 		local fc_amount = math.min(NEMESIS.fizzled_count + 2, #counter_list)
 		for i = 1,fc_amount do
@@ -1114,7 +1114,7 @@ ABILITIES["nap-al-mixingrubbish"] = {
                 local flask_comp = EntityGetFirstComponentIncludingDisabled(item_id, "MaterialInventoryComponent")
                 if flask_comp ~= nil then
                     local potion_material = random_from_array(rubbishes)
-                    AddMaterialInventoryMaterial(item_id, potion_material, 360)
+                    AddMaterialInventoryMaterial(item_id, potion_material, 400)
                 end
             end
         end
@@ -1125,7 +1125,7 @@ ABILITIES["nap-d-sealedmattereater"] = {
     id="nap-d-sealedmattereater", name="nap-Sealed Matter Eater", weigths={0.00, 0.00, 0.20, 0.10, 0.25, 0.15},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-sealedmattereater.png",
     fn=function()
-        timed_ability("nap-sealedmattereater", 60*120,"mods/Nemesis-Ability-Plus/files/effects/nap-sealedmattereater/effect.xml")
+        timed_ability("nap-sealedmattereater", 60*150,"mods/Nemesis-Ability-Plus/files/effects/nap-sealedmattereater/effect.xml")
     end
 }
 
@@ -1133,7 +1133,7 @@ ABILITIES["nap-linearc"] = {
     id="nap-linearc", name="nap-Line Arc", weigths={0.80, 0.80, 0.80, 0.70, 0.60, 0.40},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-linearc.png",
     fn=function()
-        timed_ability("nap-linearc", 60*48,"mods/Nemesis-Ability-Plus/files/effects/nap-linearc/effect.xml")
+        timed_ability("nap-linearc", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-linearc/effect.xml")
     end
 }
 
@@ -1162,7 +1162,7 @@ ABILITIES["nap-hookray"] = {
     id="nap-hookray", name="nap-Hook Ray", weigths={0.30, 0.10, 0.40, 0.60, 0.20, 0.20},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-hookray.png",
     fn=function()
-        timed_ability("nap-hookray", 60*18,"mods/Nemesis-Ability-Plus/files/effects/nap-hookray/effect.xml")
+        timed_ability("nap-hookray", 60*20,"mods/Nemesis-Ability-Plus/files/effects/nap-hookray/effect.xml")
     end
 }
 
@@ -1239,7 +1239,7 @@ ABILITIES["nap-al-enemyconfusion"] = {
     id="nap-al-enemyconfusion", name="nap-Enemy Confusion", weigths={0.2, 0.3, 0.1, 0.2, 0.3, 0.2},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-enemyconfusion.png",
     fn=function()
-        timed_ability("nap-enemyconfusion", 60*45,"mods/Nemesis-Ability-Plus/files/effects/nap-enemyconfusion/effect.xml")
+        timed_ability("nap-enemyconfusion", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-enemyconfusion/effect.xml")
     end
 }
 
@@ -1247,7 +1247,7 @@ ABILITIES["nap-floatingarc"] = {
     id="nap-floatingarc", name="nap-Floating Arc", weigths={0.70, 0.50, 0.60, 0.50, 0.50, 0.40},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-floatingarc.png",
     fn=function()
-        timed_ability("nap-floatingarc", 60*40,"mods/Nemesis-Ability-Plus/files/effects/nap-floatingarc/effect.xml")
+        timed_ability("nap-floatingarc", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-floatingarc/effect.xml")
     end
 }
 
@@ -1255,7 +1255,7 @@ ABILITIES["nap-d-berserk"] = {
     id="nap-d-berserk", name="nap-Berserk", weigths={0.40, 0.30, 0.40, 0.30, 0.40, 0.30},
 	sprite="mods/Nemesis-Ability-Plus/files/badges/nap-berserk.png",
     fn=function()
-        timed_ability("nap-berserk", 60*60,"mods/Nemesis-Ability-Plus/files/effects/nap-berserk/effect.xml")
+        timed_ability("nap-berserk", 60*120,"mods/Nemesis-Ability-Plus/files/effects/nap-berserk/effect.xml")
     end
 }
 
@@ -1279,25 +1279,27 @@ counter_list_full={
     function (counter_time) timed_ability("slowpoke", 60*math.floor(45*counter_time)) end,
     function (counter_time) timed_ability("gravityfield", 60*math.floor(30*counter_time)) end,
     function (counter_time) timed_ability("heavyspread", 60*math.floor(30*counter_time)) end,
-    function (counter_time) timed_ability("nap-blindness", 60*math.floor(8*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-blindness/effect.xml") end,
+    function (counter_time) timed_ability("nap-blindness", 60*math.floor(12*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-blindness/effect.xml") end,
     function (counter_time) timed_ability("nap-explosive-projectile", 60*math.floor(30*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-explosive-projectile/effect.xml") end,
     function (counter_time) timed_ability("nap-youwantthis", 60*math.floor(30*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-Youwantthis/effect.xml") end,
-    function (counter_time) timed_ability("nap-drinkingparty", 60*math.floor(20*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-drinkingparty/effect.xml") end,
-    function (counter_time) timed_ability("nap-enemyinvisible", 60*math.floor(45*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-enemyinvisible/effect.xml") end,
+    function (counter_time) timed_ability("nap-drinkingparty", 60*math.floor(24*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-drinkingparty/effect.xml") end,
+    function (counter_time) timed_ability("nap-enemyinvisible", 60*math.floor(60*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-enemyinvisible/effect.xml") end,
     function (counter_time) timed_ability("nap-morerecoil", 60*math.floor(42*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-morerecoil/effect.xml") end,
     function (counter_time) timed_ability("nap-powerrangers", 60*math.floor(42*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-powerrangers/effect.xml") end,
-    function (counter_time) timed_ability("nap-sluggishwand", 60*math.floor(25*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-sluggishwand/effect.xml") end,
+    function (counter_time) timed_ability("nap-sluggishwand", 60*math.floor(30*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-sluggishwand/effect.xml") end,
     function (counter_time) timed_ability("nap-perkenemy", 60*math.floor(10*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-perkenemy/effect.xml") end,
-    function (counter_time) timed_ability("nap-bubblybounce", 60*math.floor(30*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-bubblybounce/effect.xml") end,
-    function (counter_time) timed_ability("nap-moreknockback", 60*math.floor(45*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-moreknockback/effect.xml")end,
+    function (counter_time) timed_ability("nap-bubblybounce", 60*math.floor(36*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-bubblybounce/effect.xml") end,
+    function (counter_time) timed_ability("nap-moreknockback", 60*math.floor(60*counter_time),"mods/Nemesis-Ability-Plus/files/effects/nap-moreknockback/effect.xml")end,
     function (counter_time) timed_ability("nap-glassparty", 60*math.max(1,math.floor(1*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-glassparty/effect.xml")end,
     function (counter_time) timed_ability("nap-bloodlust", 60*math.max(1,math.floor(24*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-bloodlust/effect.xml")end,
     function (counter_time) timed_ability("nap-poobomber", 60*math.max(1,math.floor(45*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-poobomber/effect.xml")end,
-    function (counter_time) timed_ability("nap-invisprojectiles", 60*math.max(1,math.floor(90*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-invisprojectiles/effect.xml")end,
+    function (counter_time) timed_ability("nap-invisprojectiles", 60*math.max(1,math.floor(105*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-invisprojectiles/effect.xml")end,
     function (counter_time) timed_ability("nap-effectingswapper", 60*math.max(1,math.floor(30*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-effectingswapper/effect.xml")end,
-    function (counter_time) timed_ability("nap-fireballray", 60*math.max(1,math.floor(20*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-fireballray/effect.xml")end,
+    function (counter_time) timed_ability("nap-fireballray", 60*math.max(1,math.floor(24*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-fireballray/effect.xml")end,
     function (counter_time) timed_ability("nap-bundles", 60*math.max(1,math.floor(12*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-bundles/effect.xml")end,
-    function (counter_time) timed_ability("nap-linearc", 60*math.max(1,math.floor(48*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-linearc/effect.xml")end,
-    function (counter_time) timed_ability("nap-hookray", 60*math.max(1,math.floor(18*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-hookray/effect.xml")end,
-    function (counter_time) timed_ability("nap-titres", 60*math.max(1,math.floor(66*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.xml")end
+    function (counter_time) timed_ability("nap-linearc", 60*math.max(1,math.floor(60*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-linearc/effect.xml")end,
+    function (counter_time) timed_ability("nap-hookray", 60*math.max(1,math.floor(20*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-hookray/effect.xml")end,
+    function (counter_time) timed_ability("nap-titres", 60*math.max(1,math.floor(66*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.xml")end,
+    function (counter_time) timed_ability("nap-enemyconfusion", 60*math.max(1,math.floor(60*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-hookray/effect.xml")end,
+    function (counter_time) timed_ability("nap-floatingarc", 60*math.max(1,math.floor(60*counter_time)),"mods/Nemesis-Ability-Plus/files/effects/nap-titres/effect.xml")end
 }

@@ -38,7 +38,7 @@ function wand_fired( wand_id )
 						
 					shoot_projectile( entity_id, projectile, pos_x, pos_y, vel_x + k, vel_y + k )
 						
-					cd = 10
+					cd = 36
 				end
 				
 				ComponentSetValue2( comp_cd, "value_int", cd )

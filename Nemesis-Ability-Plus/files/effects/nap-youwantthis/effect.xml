@@ -7,6 +7,12 @@
 		>
 	</ShotEffectComponent>
 
+	<LuaComponent 
+		_enabled="1" 
+		script_shot="data/scripts/perks/projectile_homing_shooter_enemy.lua" 
+		execute_every_n_frame="-1">
+	</LuaComponent>
+
     <UIIconComponent
 		icon_sprite_file="mods/Nemesis-Ability-Plus/files/badges/nap-youwantthis.png"
 		name="$streamingevent_boomerang_shots"

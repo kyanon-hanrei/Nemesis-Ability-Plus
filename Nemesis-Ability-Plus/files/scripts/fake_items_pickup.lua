@@ -18,6 +18,29 @@ function shoot_fakeshot( entity_item, player_entity )
 	GamePrintImportant(message_list[j])
 	GamePlaySound( "data/audio/Desktop/explosion.bank", "explosions/liquid", x, y )
 	local bid = shoot_projectile( entity_id, "mods/Nemesis-Ability-Plus/files/entities/projectiles/fake_shot.xml", x , y - 1 , 0, 2000 )
+
+	local dcomps = EntityGetComponent( player_entity, "DamageModelComponent" )
+	local hp = 0
+	local max_hp = 0
+	
+	if ( dcomps ~= nil ) then
+		for i,comp in ipairs( dcomps ) do
+			max_hp = ComponentGetValue2( comp, "max_hp" )
+			hp = ComponentGetValue2( comp, "hp" )
+			
+			if((max_hp * 25) > 5)then
+				max_hp = max_hp - (5 / 25)
+			end
+
+			if ( hp > max_hp )then
+				hp = max_hp
+			end
+			
+			ComponentSetValue2( comp, "max_hp", max_hp )
+			ComponentSetValue2( comp, "hp", hp )
+		end
+	end
+
 	EntityKill( entity_item )
 end
 

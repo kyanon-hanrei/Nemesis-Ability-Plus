@@ -9,7 +9,7 @@
 	<HomingComponent
 		target_tag="prey"
 		homing_targeting_coeff="2"
-		detect_distance="800"
+		detect_distance="1024"
 		homing_velocity_multiplier="1.0"
 		>
 	</HomingComponent>
@@ -180,12 +180,12 @@
 		<LuaComponent 
 			_enabled="1" 
 			script_source_file="mods/Nemesis-Ability-Plus/files/effects/nap-whitechristmas/sled_presenter.lua" 
-			execute_every_n_frame="60">
+			execute_every_n_frame="30">
 		</LuaComponent>
 	</Entity>
 
 	<LifetimeComponent
-		lifetime="1500" >
+		lifetime="1800" >
 	</LifetimeComponent>
 	
 	<AudioComponent
